@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Flying Bat</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="shortcut icon" href="images/BatUp.png" type="image/x-icon">
+    <link href="https://fonts.cdnfonts.com/css/public-pixel" rel="stylesheet">
+</head>
+<body>
+    <div class="background"></div>
+    <img class="bird" src="images/bat.gif" alt="bird-img">
+    <div class="message">
+        The Flying Bat <br>
+        <span style="color: #58D858;">Get Ready!</span><br>
+        <img src="images/taptap.png" alt="Tap"><br>
+        <img src="images/Controls.png" alt="Controls" style="align-items: flex-start;">
+    </div>
+    <div class="score">
+        <span class="score_title"></span>
+        <span class="score_val"></span>
+    </div>
+    
+    <div class="game-over-popup">
+        <h1>Game Over</h1>
+        <div class="score-display">
+            <span>Score: </span><br>
+            <span class="current-score" style="color: #fff;">0</span><br>
+            <span>Best: </span><br>
+            <span class="best-score" style="color: #fff;">0</span>
+        </div>
+        <div class="buttons">
+            <button class="play-again-btn"><img src="images/playButton.png" alt="PlayButton"></button>
+            <button class="lb-btn"><img src="images/leaderboardButton.png" alt="LeaderboardButton"></button>
+        </div>
+    </div>
+
+    <div class="leaderboard-popup">
+        <h1>Leaderboard</h1>
+        <div class="leaderboard-display">
+        </div>
+        <div class="buttons">
+            <button class="StartOver" onclick="siteReload()"><img src="images/playButton.png" alt="playButton"></button>
+        </div>
+    </div>
+
+    <div class="pause-popup" style="display: none;">
+        <h1>Game Paused</h1>
+        <div class="music-toggle">
+            <label for="music-toggle-switch">Music On</label><br>
+            <p>P to Start</p>
+        </div>
+        
+    </div>
+
+    <div class="hearts">
+        <img src="images/heart.png" alt="">
+    </div>
+
+    <audio id="death-sound" src="Sounds/die.wav"></audio>
+    <audio id="point-sound" src="Sounds/point.wav"></audio>
+    <audio id="jump-sound" src="Sounds/wing.wav"></audio>
+    <audio id="background-music" loop>
+        <source src="Sounds/background.mp3" type="audio/mpeg">
+        Je browser ondersteunt geen audio-element.
+    </audio>
+
+    <script src="JS/script.js"></script>
+</body>
+</html>
